@@ -3,24 +3,21 @@ import sys
 
 from cliff.app import App
 from cliff.commandmanager import CommandManager
-from klempner.cli.commands import Check
+
 
 class KlempnerApp(App):
-
     def __init__(self):
         super().__init__(
             description='Klempner CLI',
             version='0.0.1',
             command_manager=CommandManager('klempner.cli'),
             deferred_help=True,
-            )
+        )
 
     def initialize_app(self, argv):
         self.LOG.debug('initialize_app')
         # hide the cliff complete command, it's confusing
         self.command_manager.commands.pop('complete', None)
-        # No need to add this in code, it's done via entry_point
-        # self.command_manager.add_command(Check.__name__.lower(), Check)
 
     def prepare_to_run_command(self, cmd):
         self.LOG.debug('prepare_to_run_command %s', cmd.__class__.__name__)
