@@ -43,12 +43,14 @@ def conflicts_with_a_neighbouring_module(directory_path):
 
 class LambdaZipper:
     def __init__(self, lambda_name: str, target_dir: str = 'dist_lambda', output: str = None):
-        """
+        """Zip an AWS lambda function and its requirements to a deployment zip file
 
         Parameters
         ----------
         lambda_name
-            The directory, where the lambda is stored. Will be used as name
+            The directory, where the lambda function code and config.yml is stored. Will be used as name
+        target_dir
+            Directory where the zip file shall be stored.
         """
         self.lambda_name = lambda_name
         self.config = yaml.load(resource_string('lambdas', f'{self.lambda_name}/config.yml'))
@@ -90,7 +92,7 @@ class LambdaZipper:
         for w in wheel_files:
             package_name = w.get('package_name')
             shutil.rmtree(str(temp_project_path / package_name), ignore_errors=True)
-            with zipfile.ZipFile(w.get('wheel_file')) as zfile:
+            with zipfile.ZipFile(str(w.get('wheel_file'))) as zfile:
                 # noinspection PyUnusedLocal
                 files = [zfile.extract(f, temp_project_path) for f in zfile.namelist()
                          if f.startswith(f'{package_name}/')]
@@ -103,8 +105,7 @@ class LambdaZipper:
         compression_method = self.compression_method()
 
         self.zip_path.parent.mkdir(exist_ok=True, parents=True)
-        with zipfile.ZipFile(self.zip_path, 'w', compression=compression_method) as zipf:
-
+        with zipfile.ZipFile(str(self.zip_path), 'w', compression=compression_method) as zipf:
             for root, dirs, files in os.walk(str(temp_project_path)):
 
                 for filename in files:
