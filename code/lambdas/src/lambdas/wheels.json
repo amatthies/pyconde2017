@@ -1,0 +1,14 @@
+{
+"numpy=1.13.1": "https://pypi.python.org/packages/59/e2/57c1a6af4ff0ac095dd68b12bf07771813dbf401faf1b97f5fc0cb963647/numpy-1.13.1-cp36-cp36m-manylinux1_x86_64.whl",
+"pandas=0.20.3": "https://pypi.python.org/packages/fe/6f/5733658857dffb998afa2120027171c263384ada0487a969e5ecd5bf9ac9/pandas-0.20.3-cp36-cp36m-manylinux1_x86_64.whl",
+"numexpr=2.6.2": "https://pypi.python.org/packages/f9/fd/d17b6e9e4538c922daa47468fdb4d33e7d8e77342338ab239ee47149893b/numexpr-2.6.2-cp36-cp36m-manylinux1_x86_64.whl",
+"psycopg2=2.7.2": "https://pypi.python.org/packages/d2/5a/6c2fe0b4671c81e7525c737d6600a5c82b7550a5f2dff8a01afb616dbbf4/psycopg2-2.7.2-cp36-cp36m-manylinux1_x86_64.whl",
+"pymysql=0.7.11": "https://pypi.python.org/packages/c6/42/c54c280d8418039bd2f61284f99cb6d9e0eae80383fc72ceb6eac67855fe/PyMySQL-0.7.11-py2.py3-none-any.whl",
+"requests=2.18.1": "https://pypi.python.org/packages/5a/58/671011e3ff4a06e2969322267d78dcfda1bf4d1576551df1cce93cd7239d/requests-2.18.1-py2.py3-none-any.whl",
+"urllib3=1.22": "https://pypi.python.org/packages/63/cb/6965947c13a94236f6d4b8223e21beb4d576dc72e8130bd7880f600839b8/urllib3-1.22-py2.py3-none-any.whl",
+"chardet=3.0.4": "https://pypi.python.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl",
+"idna=2.5": "https://pypi.python.org/packages/11/7d/9bbbd7bb35f34b0169542487d2a8859e44306bb2e6a4455d491800a5621f/idna-2.5-py2.py3-none-any.whl",
+"certifi=2017.4.17": "https://pypi.python.org/packages/eb/01/c1f58987b777d6c4ec535b4e004a4a07bfc9db06f0c7533367ca6da8f2a6/certifi-2017.4.17-py2.py3-none-any.whl",
+"pytz=2017.2": "https://pypi.python.org/packages/55/62/e7cd0e15b76062d298413f14bb4ec3cd8568a22d274427f9c3c7286969f4/pytz-2017.2-py2.py3-none-any.whl",
+"sqlalchemy=1.1.11": "https://sqlalchemy-wheels.s3.amazonaws.com/SQLAlchemy-1.1.11-cp36-cp36m-manylinux1_x86_64.whl"
+}

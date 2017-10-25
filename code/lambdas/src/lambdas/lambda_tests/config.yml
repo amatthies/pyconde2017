@@ -1,0 +1,14 @@
+name: lambda_tests
+handler: handler.py.lambda_handler
+s3_bucket: babbeldataeng-miscellaneous-dev
+s3_key: amatthies/staging/lambdas/lambda_tests.zip
+dependencies:
+  - certifi=2017.4.17
+  - urllib3=1.22
+  - idna=2.5
+  - chardet=3.0.4
+  - requests=2.18.1
+  - numpy=1.13.1
+  - pytz=2017.2
+  - pandas=0.20.3
+  - sqlalchemy=1.1.11
