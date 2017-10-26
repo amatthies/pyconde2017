@@ -1,0 +1,5 @@
+include README.md
+include setup.py
+include setup.cfg
+
+global-exclude *.py[cod] __pycache__ *.so *.dylib .DS_Store
